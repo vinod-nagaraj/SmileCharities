@@ -35,7 +35,7 @@ public class SchemeController {
 	/**
 	 * @author Vinod B N
 	 * 
-	 * 
+	 *  
 	 * @param Category of categoryId
 	 * @return List of Category
 	 * @return response with User message and status code

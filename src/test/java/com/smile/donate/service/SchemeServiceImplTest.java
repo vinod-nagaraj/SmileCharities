@@ -35,7 +35,7 @@ public class SchemeServiceImplTest {
 	
 	@Test
 	public void getCategoryTest() {
-		List<Category> cat = new ArrayList<>();
+		List<Category> cat = new ArrayList<>(); 
 		Category category = new Category();
 		CategoryResponseDto categoryResponseDto = new CategoryResponseDto();
 		category.setCategoryId(1L);

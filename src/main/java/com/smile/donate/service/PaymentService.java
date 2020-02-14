@@ -2,7 +2,7 @@ package com.smile.donate.service;
 
 public interface PaymentService {
 	/**
-	 * @author Muthu
+	 * @author Vinod B N
 	 * 
 	 * @param paymentType
 	 * @return

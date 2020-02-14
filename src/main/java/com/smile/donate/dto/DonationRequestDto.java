@@ -7,6 +7,13 @@ public class DonationRequestDto {
 	private String mobileNo;
 	private String panNo;
 	private Long schemeId;
+	private String paymentType;
+	public String getPaymentType() {
+		return paymentType;
+	}
+	public void setPaymentType(String paymentType) {
+		this.paymentType = paymentType;
+	}
 	public String getUserName() {
 		return userName;
 	}
