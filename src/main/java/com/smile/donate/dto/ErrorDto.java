@@ -1,25 +1,22 @@
 package com.smile.donate.dto;
 
-public class DonationResponseDto {
+public class ErrorDto {
 
 	private Integer statusCode;
-	private Long donationId;
-
+	private String message;
 	public Integer getStatusCode() {
 		return statusCode;
 	}
-
 	public void setStatusCode(Integer statusCode) {
 		this.statusCode = statusCode;
 	}
-
-	public Long getDonationId() {
-		return donationId;
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
-	public void setDonationId(Long donationId) {
-		this.donationId = donationId;
-
-	}
-
+	
+	
 }

@@ -1,9 +1,10 @@
 package com.smile.donate.dto;
 
-public class DonationResponseDto {
+
+public class LoginResponseDto {
 
 	private Integer statusCode;
-	private Long donationId;
+	private String adminName;
 
 	public Integer getStatusCode() {
 		return statusCode;
@@ -13,13 +14,13 @@ public class DonationResponseDto {
 		this.statusCode = statusCode;
 	}
 
-	public Long getDonationId() {
-		return donationId;
+	public String getAdminName() {
+		return adminName;
 	}
 
-	public void setDonationId(Long donationId) {
-		this.donationId = donationId;
-
+	public void setAdminName(String adminName) {
+		this.adminName = adminName;
 	}
 
 }
+

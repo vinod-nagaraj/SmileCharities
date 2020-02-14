@@ -14,6 +14,7 @@ public class Admin {
 	private String mobileNumber;
 	private String password;
 
+
 	public String getPassword() {
 		return password;
 	}
