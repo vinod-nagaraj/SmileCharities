@@ -57,7 +57,8 @@ public class SchemeServiceImpl implements SchemeService {
 		List<SchemeDetail> schemeDetails = new ArrayList<>();
 		donations.forEach(donation->{
 			SchemeDetail schemeDetail = new SchemeDetail();
-			BeanUtils.copyProperties(donations, schemeDetail);
+			
+			BeanUtils.copyProperties(donation, schemeDetail);
 			schemeDetails.add(schemeDetail);
 		});
 		SchemeResponseDto schemeResponseDto = new SchemeResponseDto();

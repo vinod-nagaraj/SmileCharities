@@ -18,13 +18,29 @@ public class SchemeController {
 	
 	@Autowired
 	SchemeService schemeService;
-	
+	/**
+	 * @author Vinod B N
+	 * 
+	 * 
+	 * 
+	 * @return List of category
+	 * @return response with User message and status code
+	 * 
+	 */
 	@GetMapping
 	public CategoryResponseDto getCategory(){
 		CategoryResponseDto category = schemeService.getCategory();
 		return category;
 	}
-	
+	/**
+	 * @author Vinod B N
+	 * 
+	 * 
+	 * @param Category of categoryId
+	 * @return List of Category
+	 * @return response with User message and status code
+	 * 
+	 */
 	@GetMapping("{categoryId}/schemes")
 	public SchemeResponseDto getScheme (@PathVariable Long categoryId) {
 		SchemeResponseDto scheme = schemeService.getScheme(categoryId);

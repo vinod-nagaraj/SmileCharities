@@ -9,6 +9,7 @@ import com.smile.donate.entity.DonationScheme;
 
 @Repository
 public interface DonationSchemeRepository extends JpaRepository<DonationScheme, Long>{
+
 	List<DonationScheme> findByCategoryId(Long categoryId);
 
 }

@@ -6,7 +6,7 @@ public class SchemeDetail {
 	private String schemeName;
 	private Double amount;
 	private String description;
-	private String contributors;
+	private Integer contributors;
 	private String taxBenefit;
 
 	public Long getSchemeId() {
@@ -41,11 +41,11 @@ public class SchemeDetail {
 		this.description = description;
 	}
 
-	public String getContributors() {
+	public Integer getContributors() {
 		return contributors;
 	}
 
-	public void setContributors(String contributors) {
+	public void setContributors(Integer contributors) {
 		this.contributors = contributors;
 	}
 
