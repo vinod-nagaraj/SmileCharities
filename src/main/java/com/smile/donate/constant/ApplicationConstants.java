@@ -19,6 +19,7 @@ public class ApplicationConstants {
 	public static final String APP_NAME = "Smile Charities";
 	public static final String PAYTM_PAYMENT = "PayTm";
 	public static final String PHONEPE_PAYMENT = "PhonePay";
+	public static final String GPAY_PAYMENT ="Gpay";
 
 
 }
