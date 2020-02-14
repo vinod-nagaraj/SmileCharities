@@ -19,16 +19,14 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/{schemeId}/contributors")
 @Slf4j
 public class AdminController {
-	
+
 	@Autowired
 	DonationService donationService;
-	
+
 	@GetMapping
-	public ResponseEntity<DonationResponseDto> getSlots(@PathVariable Long schemeId) {
-		DonationResponseDto donationResponseDto= donationService.getDonationsList(schemeId);
+	public ResponseEntity<DonationResponseDto> getDonationsList(@PathVariable Long schemeId) {
+		DonationResponseDto donationResponseDto = donationService.getDonationsList(schemeId);
 		return new ResponseEntity<DonationResponseDto>(donationResponseDto, HttpStatus.OK);
 	}
-	
-	
 
 }
