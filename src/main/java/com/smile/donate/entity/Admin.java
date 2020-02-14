@@ -12,6 +12,17 @@ public class Admin {
 	private Long adminId;
 	private String adminName;
 	private String mobileNumber;
+	private String password;
+	
+	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public Long getAdminId() {
 		return adminId;
