@@ -9,24 +9,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smile.donate.dto.DonationResponseDto;
+import com.smile.donate.dto.AdminResponseDto;
 import com.smile.donate.service.DonationService;
-
-import lombok.extern.slf4j.Slf4j;
 
 @CrossOrigin(allowedHeaders = { "*", "*/" }, origins = { "*", "*/" })
 @RestController
 @RequestMapping("/{schemeId}/contributors")
-@Slf4j
+
 public class AdminController {
 
 	@Autowired
 	DonationService donationService;
 
 	@GetMapping
-	public ResponseEntity<DonationResponseDto> getDonationsList(@PathVariable Long schemeId) {
-		DonationResponseDto donationResponseDto = donationService.getDonationsList(schemeId);
-		return new ResponseEntity<DonationResponseDto>(donationResponseDto, HttpStatus.OK);
+	public ResponseEntity<AdminResponseDto> getDonationsList(@PathVariable Long schemeId) {
+		AdminResponseDto adminResponseDto = donationService.getDonationsList(schemeId);
+		return new ResponseEntity<AdminResponseDto>(adminResponseDto, HttpStatus.OK);
 	}
 
 }

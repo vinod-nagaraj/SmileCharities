@@ -1,11 +1,9 @@
 package com.smile.donate.dto;
 
-import java.util.List;
-
 public class DonationResponseDto {
 
 	private Integer statusCode;
-	private List<DonationResponse> contributorDetails;
+	private Long donationId;
 
 	public Integer getStatusCode() {
 		return statusCode;
@@ -15,12 +13,13 @@ public class DonationResponseDto {
 		this.statusCode = statusCode;
 	}
 
-	public List<DonationResponse> getContributorDetails() {
-		return contributorDetails;
+	public Long getDonationId() {
+		return donationId;
 	}
 
-	public void setContributorDetails(List<DonationResponse> contributorDetails) {
-		this.contributorDetails = contributorDetails;
+	public void setDonationId(Long donationId) {
+		this.donationId = donationId;
+
 	}
 
 }

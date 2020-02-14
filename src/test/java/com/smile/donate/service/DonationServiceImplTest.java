@@ -1,6 +1,6 @@
 package com.smile.donate.service;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import com.smile.donate.dto.AdminResponseDto;
 import com.smile.donate.dto.DonationResponseDto;
 import com.smile.donate.entity.Donation;
 import com.smile.donate.repository.DonationRepository;
@@ -51,12 +52,30 @@ public class DonationServiceImplTest {
 		list.add(donation2);
 		list.add(donation3);
 		System.out.println(list);
-		DonationResponseDto resp = new DonationResponseDto();
+
 		Mockito.when(donationRepository.findBySchemeId(1001L)).thenReturn(list);
-		resp = donationServiceImpl.getDonationsList(1001L);
+		AdminResponseDto resp = donationServiceImpl.getDonationsList(1001L);
 		resp.setStatusCode(200);
+		assertEquals(200, resp.getStatusCode());
 
-
+	}
+	
+	@Test
+	public void donate()
+	{
+		Donation req = new Donation();
+		req.setEmail("a@gmail.com");
+		req.setMobileNumber("0987654321");
+		req.setPanNumber("CPFPA7773A");
+		req.setSchemeId(1001L);
+		req.setUserName("Raghib");
+		DonationResponseDto  resp = new DonationResponseDto();
+		resp.setDonationId(101L);
+		resp.setStatusCode(200);
+		//Mockito.when(donationRepository.save(req)).thenReturn(resp);
+        //resp = donationServiceImpl.donate(req);
+		
+		
 	}
 
 }
