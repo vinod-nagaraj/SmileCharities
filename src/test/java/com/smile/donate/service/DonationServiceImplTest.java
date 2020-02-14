@@ -1,11 +1,12 @@
 package com.smile.donate.service;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -72,8 +73,9 @@ public class DonationServiceImplTest {
 		DonationResponseDto  resp = new DonationResponseDto();
 		resp.setDonationId(101L);
 		resp.setStatusCode(200);
-		//Mockito.when(donationRepository.save(req)).thenReturn(resp);
-        //resp = donationServiceImpl.donate(req);
+		Mockito.when(donationRepository.save(Mockito.any())).thenReturn(req);
+	    assertNotNull(resp);
+        
 		
 		
 	}
