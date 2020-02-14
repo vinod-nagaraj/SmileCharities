@@ -28,7 +28,7 @@ public class SchemeServiceImpl implements SchemeService {
 	CategoryRepository categoryRepository;
 	
 	@Autowired
-	DonationSchemeRepository DonationSchemeRepository;
+	DonationSchemeRepository donationSchemeRepository;
 
 	@Override
 	public CategoryResponseDto getCategory() {
@@ -45,12 +45,12 @@ public class SchemeServiceImpl implements SchemeService {
 		CategoryResponseDto categoryResponseDto = new CategoryResponseDto();
 		categoryResponseDto.setStatusCode(HttpStatus.OK.value());
 		categoryResponseDto.setCategoryDetails(categoryDetails);
-		return categoryResponseDto;
+		return categoryResponseDto; 
 	}
 
 	@Override
 	public SchemeResponseDto getScheme(Long categoryId) {
-		List<DonationScheme> donations = DonationSchemeRepository.findByCategoryId(categoryId);
+		List<DonationScheme> donations = donationSchemeRepository.findByCategoryId(categoryId);
 		if(ObjectUtils.isEmpty(donations)) {
 			throw new NoDonationSchemeFoundException(ApplicationConstants.NO_RESULTS_FOUND);
 		}
