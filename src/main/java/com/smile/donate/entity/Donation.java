@@ -10,18 +10,18 @@ public class Donation {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String donationId;
+	private Long donationId;
 	private String userName;
 	private String mobileNumber;
 	private String panNumber;
 	private String email;
 	private Long schemeId;
 
-	public String getDonationId() {
+	public Long getDonationId() {
 		return donationId;
 	}
 
-	public void setDonationId(String donationId) {
+	public void setDonationId(Long donationId) {
 		this.donationId = donationId;
 	}
 
