@@ -29,6 +29,15 @@ public class PDFController {
 	@Autowired
 	private EmailService emailService;
 
+	/**
+	 * @author Kathika T
+	 * 
+	 * 
+	 * @param Donation of donationId
+	 * @return List of Donation
+	 * @return response with User message and status code
+	 * 
+	 */
 	@RequestMapping(value = "/{donationId}/pdfreport", method = RequestMethod.GET, produces = MediaType.APPLICATION_PDF_VALUE)
 	public void taxReport(@PathVariable Long donationId)
 			throws FileNotFoundException, DocumentException {
